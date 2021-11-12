@@ -1,25 +1,27 @@
 {
-  "inbounds": [
-    {
-      "port": 8080,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "8c35bef3-d51f-41ab-ac87-7b053410495b",
-            "alterId": 64
-          }
-        ]
-      },
-      "streamSettings": {
-        "network":"ws"
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
-    }
-  ]
-}
+   "inbounds": [
+            {
+              "port": 8080,
+              "protocol": "vless",
+              "settings": {
+                "decryption": "none",
+                "clients": [
+                  {
+                    "id": "65e24735-ef7c-44f9-a91d-d8c1d8f5ee5f"
+                  }
+                ]
+              },
+              "streamSettings": {
+                "network":"ws",
+                "wsSettings": {
+                  "path": "ws16"
+                }
+              }
+            }
+          ],
+          "outbounds": [
+            {
+              "protocol": "freedom"
+            }
+          ]
+        }
